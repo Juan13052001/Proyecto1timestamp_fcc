@@ -20,11 +20,11 @@ app.get("/", function (req, res) {
 });
 
 // your first API endpoint...
-app.get("/api/timestamp", function (req, res) {
+app.get("/api/", function (req, res) {
     res.json({ unix: Date.now(), utc: Date() });
 });
 
-app.get("/api/timestamp/:date", (req, res) => {
+app.get("/api/:date", (req, res) => {
     let dateString = req.params.date;
     if (/\d{6}/.test(dateString)) {
         let dateInt = parseInt(dateString);
